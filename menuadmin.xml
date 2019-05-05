@@ -1,0 +1,721 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<menu>
+	<!--MENUADMIN V 1.0 ADMIN SYDORIA GAMES 2014-->
+
+<item type="static" label="Serveur"/>
+	
+	<item type="menu" label="Infos">
+					<item type="static" label="Info %p"/>	
+					<item type="sendCommand" label="Informations Compte" command="info char %p"/>
+					<item type="sendChat" label="Informations Connectés" command=".info"/>
+	</item>
+	
+	<item type="menu" label="Annonces">
+					<item type="static" label="Annonce simple"/>	
+					<item type="prepareCommand" label="All" command="a  "/>
+	</item>
+	<item type="sendCommand" label="Effectuer une sauvegarde du Serveur" command="save world"/>
+<item type="static" label="Modération"/>
+	
+	<item type="menu" label="01. Avertissements">
+				<item type="Menu" label="Message Privé" command="look {1003}">
+					<item type="sendChat" label="Flood" command="/w %p Le Flood est interdit sur notre Serveur de Jeu. C'est un premier avertissement avant un mute."/>
+					<item type="sendChat" label="Commerce Inter-Serveur" command="/w %p Le Commerce Inter-Serveur est interdit sur notre Serveur de Jeu. C'est un premier avertissement avant un mute voire un bannissement temporaire ou même définitif."/>
+					<item type="sendChat" label="Insultes" command="/w %p Les Insultes sont prohibées et peuvent être sanctionables d'un mute avant un ban. C'est un premier avertissement."/>
+					<item type="sendChat" label="Harcélement et Menaces" command="/w %p Le Harcélement et les Menaces sont prohibées et peuvent être sanctionables d'un mute avant un ban. C'est un premier avertissement."/>
+					<item type="sendChat" label="Arnaques" command="/w %p Les Arnaques sont santionnables d'un Banissement temporaire voire Définitif. C'est un premier avertissement."/>
+					<item type="sendChat" label="Insultes" command="/w %p Le Racisme et l'Homophobie ne sont pas tolérées peuvent être sanctionables d'un mute avant un ban. C'est un premier avertissement."/>
+
+				</item>	
+				<item type="Menu" label="Annonce Serveur" command="look {1003}">
+					<item type="sendChat" label="Rappel Utilisation des Cannaux" command=".a Merci d'utiliser les cannaux à bon escient."/>
+				</item>
+			</item>
+				<item type="menu" label="02. Sanctions">
+		<item type="static" label="Sanctions Générales"/>
+		
+			<item type="sendCommand" label="ExcèsVulgarité M-60m" command="mute %p 60"/>
+
+		
+		<item type="batch" label="Insulte K-24h"> 
+			<item type="sendCommand" label="Insulte K-24h" command="ban %p 1440 Insultes "/>
+			<item type="sendCommand" label="Msg" command="a %p a été exclu 24h pour avoir insulté un membre de la communauté."/>
+		</item>
+		
+
+		<item type="sendCommand" label="Harcèlement-Menace MUTE-24h" command="mute %p 1440 "/>
+
+		
+
+		<item type="sendCommand" label="Racisme/Xeno JAIL-48h" command="jail %p 2880 Racisme"/>
+
+		
+
+		<item type="sendCommand" label="Arnaque JAIL-24h" command="jail %p 1440 Arnaque"/>
+
+		
+		<item type="static" label="Sanctions diverses"/>
+		<item type="batch" label="kick">
+		<item type="sendCommand" label="kick" command="kick %p"/>
+		<item type="sendCommand" label="Msg" command="a %p a été expulsé du jeu."/>
+		</item>
+		
+		<item type="menu" label="Mute">
+
+			<item type="batch" label="15 minutes"> 
+				<item type="sendCommand" label="M-15m" command="mute %p 15 "/>			
+			</item>
+			<item type="batch" label="1 heure"> 
+				<item type="sendCommand" label="M-60m" command="mute %p 60"/>
+			</item>
+			<item type="batch" label="24 heures"> 
+				<item type="sendCommand" label="M-24h" command="mute %p 1440"/>
+			</item>
+		</item>
+		
+		<item type="menu" label="Ban">
+			<item type="batch" label="1 heure"> 
+				<item type="sendCommand" label="K-60m" command="ban %p 60"/>
+				<item type="sendCommand" label="Msg" command="a %p a été expulsé du jeu.."/>
+			</item>
+			<item type="batch" label="24 heure"> 
+				<item type="sendCommand" label="BAN-24h" command="ban %p 1440"/>
+				<item type="sendCommand" label="Msg" command="a %p a été expulsé du jeu.."/>
+			</item>
+			<item type="batch" label="48 heures"> 
+				<item type="sendCommand" label="BAN-48h" command="ban %p 2880"/>
+				<item type="sendCommand" label="Msg" command="a %p a été expulsé du jeu.."/>
+			</item>
+		</item>
+		<item type="menu" label="Jail">
+			<item type="batch" label="1 heure"> 
+				<item type="sendCommand" label="J-60m" command="jail %p 60"/>
+			</item>
+			<item type="batch" label="24 heure"> 
+				<item type="sendCommand" label="J-24h" command="jail %p 1440"/>
+			</item>
+			<item type="batch" label="48 heures"> 
+				<item type="sendCommand" label="J-48h" command="jail %p 2880"/>
+			</item>
+		</item>
+		<item type="menu" label="Map">
+				<item type="sendCommand" label="Mute / Unmute map" command="mutemap" />
+
+		</item>
+	</item>
+
+	<item type="menu" label="03. Morphs">
+	<item type="sendCommand" label="Lion" command="look {1003}"/>
+	<item type="sendCommand" label="Ankama" command="look {1150|||160}"/>
+	<item type="sendCommand" label="Demorph" command="look -demorph"/>
+	<item type="sendCommand" label="Invisible/Visible" command="invisible"/>
+	</item>
+	<item type="menu" label="04. Téléportation">
+	<item type="sendCommand" label="Rejoindre" command="goname %p"/>
+	<item type="sendCommand" label="Faire venir" command="namego %p"/>
+	<item type="sendCommand" label="Kanojedo" command="tp 88212247 %p 343"/>
+	<item type="sendCommand" label="Astrub" command="tp 84674563 %p 300"/>
+	<item type="sendCommand" label="Frigost" command="tp 54172969 %p 300" />
+	<item type="sendCommand" label="Incarnam" command="tp 80216068 %p 343" />
+	</item>
+		<item type="menu" label="05. Mode Dieu">
+					<item type="sendChat" label="Activer" command=".god on"/>
+					<item type="sendChat" label="Désactiver" command=".god off"/>
+	</item>
+<item type="static" label="Administration"/>
+	<item type="menu" label="06. Pnjs">
+		<item type="menu" label="Equipements">
+					<item type="sendCommand" label="Vendeur de Chapeaux" command="npcs spawn 812"/>
+					<item type="sendCommand" label="Vendeur de Capes" command="npcs spawn 1158"/>
+					<item type="sendCommand" label="Vendeur d'Amulettes" command="npcs spawn 952"/>
+					<item type="sendCommand" label="Vendeur d'Anneaux" command="npcs spawn 790"/>
+					<item type="sendCommand" label="Vendeur de Bottes" command="npcs spawn 794"/>
+					<item type="sendCommand" label="Vendeur de Ceintures" command="npcs spawn 201"/>
+					<item type="sendCommand" label="Vendeur de Corps à Corps" command="npcs spawn 1244"/>
+					<item type="sendCommand" label="Vendeur de Boucliers" command="npcs spawn 1590"/>
+					<item type="sendCommand" label="Vendeur de Dofus" command="npcs spawn 1053"/>
+					<item type="sendCommand" label="Vendeur de Trophées" command="npcs spawn 786"/>
+					<item type="sendCommand" label="Vendeur de Parchemins" command="npcs spawn 1600"/>
+					<item type="sendCommand" label="Vendeur de Dragodindes" command="npcs spawn 816"/>
+					<item type="sendCommand" label="Vendeur de Familiers" command="npcs spawn 313"/>
+					<item type="sendCommand" label="Vendeur de Pains" command="npcs spawn 240"/>
+		</item>	
+		<item type="menu" label="07. Alignements">
+					<item type="sendCommand" label="Goultard" command="npcs spawn 1219"/>
+		</item>
+		<item type="menu" label="08. Guilde">
+					<item type="sendCommand" label="Maître des Guildes" command="npcs spawn 1222"/>
+		</item>
+		<item type="menu" label="09. Téléporteurs">
+					<item type="sendCommand" label="Téléporteur vers Astrub (Zaap)" command="npcs spawn 814"/>
+					<item type="sendCommand" label="Téléporteur vers Zone Shop (Statue)" command="npcs spawn 815"/>
+		</item>
+	</item>
+	<item type="menu" label="10. Guilde">
+					<item type="sendCommand" label="Panel de Création de Guilde" command="Guild Create %p"/>
+					<item type="sendCommand" label="Devenir Meneur de Guilde" command="Guild Boss %p"/>
+					<item type="sendCommand" label="Ajouter un Guildalogemme" command="item add 1575 %p"/>
+	</item>
+	<item type="menu" label="11. Caractéristiques">
+					<item type="sendCommand" label="Ajouter 50 Points de Caractéristiques" command="Stats 50 %p"/>
+					<item type="sendCommand" label="Ajouter 100 Points de Caractéristiques" command="Stats 100 %p"/>
+					<item type="sendCommand" label="Ajouter 250 Points de Caractéristiques" command="Stats 250 %p"/>
+					<item type="sendCommand" label="Ajouter 500 Points de Caractéristiques" command="Stats 500 %p"/>
+					<item type="sendCommand" label="Ajouter 750 Points de Caractéristiques" command="Stats 750 %p"/>
+					<item type="sendCommand" label="Ajouter 1000 Points de Caractéristiques" command="Stats 1000 %p"/>
+	</item>
+	<item type="menu" label="12. Alignements">
+			 		<item type="sendCommand" label="&lt;font color='#97DFC6'&gt;Faire rejoindre le Clan Bontarien" command="align side 1 %p"/>
+			 		<item type="sendCommand" label="&lt;font color='#DB1702'&gt;Faire rejoindre le Clan Brakmarien" command="align side 2 %p"/>
+			 		<item type="sendCommand" label="&lt;font color='#E1CE9A'&gt;Faire rejoindre le Clan Sérianne" command="align side 3 %p"/>
+	</item>
+
+	<item type="menu" label="13. Objets Vivants">
+			<item type="Static" label="Obvijevans"/>
+					<item type="sendCommand" label="Chapeau Obvijevan" command="item add 9234 %p 1 True"/>
+					<item type="sendCommand" label="Cape Obvijevan" command="item add 9233 %p 1 True"/>
+					<item type="sendCommand" label="Anneau Obvijevan" command="item add 9256 %p 1 True"/>
+					<item type="sendCommand" label="Amulette Obvijevan" command="item add 9255 %p 1 True"/>
+			<item type="Static" label="Parabiotes"/>
+					<item type="sendCommand" label="Chapeau Parabiote" command="item add 12424 %p 1 True"/>
+					<item type="sendCommand" label="Cape Parabiote" command="item add 12425 %p 1 True"/>
+					<item type="sendCommand" label="Ceinture Parabiote" command="item add 12426 %p 1 True"/>
+					<item type="sendCommand" label="Bottes Parabiote" command="item add 12427 %p 1 True"/>
+			<item type="Static" label="Rolivans"/>
+					<item type="sendCommand" label="Chapeau Rolivan" command="item add 13213 %p 1 True"/>
+					<item type="sendCommand" label="Cape Rolivan" command="item add 13211 %p 1 True"/>
+					<item type="sendCommand" label="Ceinture Rolivan" command="item add 13212 %p 1 True"/>
+					<item type="sendCommand" label="Bottes Rolivan" command="item add 13210 %p 1 True"/>		
+	</item>
+	<item type="menu" label="14. Ajouter des Niveaux">
+			<item type="Static" label="Bas Niveau (BL)"/>
+					<item type="sendCommand" label="Ajouter un Niveau" command="levelup 1 %p"/>
+					<item type="sendCommand" label="Ajouter 10 Niveaux" command="levelup 10 %p"/>
+					<item type="sendCommand" label="Ajouter 20 Niveaux" command="levelup 20 %p"/>
+					<item type="sendCommand" label="Ajouter 30 Niveaux" command="levelup 30 %p"/>
+					<item type="sendCommand" label="Ajouter 40 Niveaux" command="levelup 40 %p"/>
+					<item type="sendCommand" label="Ajouter 50 Niveaux" command="levelup 50 %p"/>
+					<item type="sendCommand" label="Ajouter 60 Niveaux" command="levelup 60 %p"/>
+					<item type="sendCommand" label="Ajouter 70 Niveaux" command="levelup 70 %p"/>
+					<item type="sendCommand" label="Ajouter 80 Niveaux" command="levelup 80 %p"/>
+			<item type="Static" label="Haut Niveau (HL)"/>
+					<item type="sendCommand" label="Ajouter 90 Niveaux" command="levelup 90 %p"/>
+					<item type="sendCommand" label="Ajouter 100 Niveaux" command="levelup 100 %p"/>
+					<item type="sendCommand" label="Ajouter 110 Niveaux" command="levelup 120 %p"/>
+					<item type="sendCommand" label="Ajouter 120 Niveaux" command="levelup 130 %p"/>
+					<item type="sendCommand" label="Ajouter 130 Niveaux" command="levelup 130 %p"/>
+					<item type="sendCommand" label="Ajouter 140 Niveaux" command="levelup 140 %p"/>
+					<item type="sendCommand" label="Ajouter 150 Niveaux" command="levelup 150 %p"/>
+			<item type="Static" label="Très Haut Niveau (THL)"/>
+					<item type="sendCommand" label="Ajouter 160 Niveaux" command="levelup 160 %p"/>
+					<item type="sendCommand" label="Ajouter 170 Niveaux" command="levelup 170 %p"/>
+					<item type="sendCommand" label="Ajouter 180 Niveaux" command="levelup 180 %p"/>
+					<item type="sendCommand" label="Ajouter 190 Niveaux" command="levelup 190 %p"/>
+					<item type="sendCommand" label="Ajouter 198 Niveaux" command="levelup 198 %p"/>
+					<item type="sendCommand" label="Ajouter 199 Niveaux (Up 200)" command="levelup 200"/>
+	</item>
+	<item type="menu" label="15. Items">
+			<item type="Static" label="Panoplies"/>
+				<item type="Menu" label="Panoplies Niveau 1-50">
+					<item type="sendCommand" label="Panoplie du du Jeune Aventurier" command="item addset 5 %p true"/>
+					<item type="sendCommand" label="Panoplie du Champ Champ" command="item addset 24 %p true"/>
+					<item type="sendCommand" label="Panoplie Arakne" command="item addset 22 %p true"/>
+					<item type="sendCommand" label="Panoplie du Bouftou" command="item addset 1 %p true"/>
+					<item type="sendCommand" label="Panoplie Champêtre" command="item addset 18 %p true"/>
+					<item type="sendCommand" label="Panoplie du Bandit" command="item addset 25 %p true"/>
+					<item type="sendCommand" label="Panoplie du Tofu" command="item addset 50 %p true"/>
+					<item type="sendCommand" label="Panoplie de L'Homme Ours" command="item addset 12 %p true"/>
+					<item type="sendCommand" label="Panoplie Moskito" command="item addset 23 %p true"/>
+					<item type="sendCommand" label="Panoplie du Sanglier" command="item addset 21 %p true"/>
+					<item type="sendCommand" label="Panoplie Fourbasse" command="item addset 16 %p true"/>
+					<item type="sendCommand" label="Panoplie de Toady" command="item addset 7 %p true"/>
+					<item type="sendCommand" label="Panoplie Larvesque" command="item addset 33 %p true"/>
+					<item type="sendCommand" label="Panoplie du Prespic" command="item addset 31 %p true"/>
+					<item type="sendCommand" label="Panoplie du Kwak de Flammes" command="item addset 2 %p true"/>
+					<item type="sendCommand" label="Panoplie du Kwak de Glace" command="item addset 13 %p true"/>
+					<item type="sendCommand" label="Panoplie du Kwak de Terre" command="item addset 14 %p true"/>
+					<item type="sendCommand" label="Panoplie du Paysan" command="item addset 47 %p true"/>
+					<item type="sendCommand" label="Panoplie du Kwak de Vent" command="item addset 15 %p true"/>
+					<item type="sendCommand" label="Panoplie du Corbac" command="item addset 8 %p true"/>
+					<item type="sendCommand" label="Panoplie de l'Abraknyde" command="item addset 3 %p true"/>
+					<item type="sendCommand" label="Panoplie Végétatif" command="item addset 10 %p true"/>
+					<item type="sendCommand" label="Panoplie du Scarafeuille Vert" command="item addset 27 %p true"/>
+					<item type="sendCommand" label="Panoplie du Scarafeuille Rouge" command="item addset 28 %p true"/>
+					<item type="sendCommand" label="Panoplie du Scarafeuille Blanc" command="item addset 29 %p true"/>
+					<item type="sendCommand" label="Panoplie du Scarafeuille Bleu" command="item addset 30 %p true"/>
+					<item type="sendCommand" label="Panoplie du Scarafeuille Noir" command="item addset 49 %p true"/>
+					<item type="sendCommand" label="Panoplie Akwadala" command="item addset 34 %p true"/>
+					<item type="sendCommand" label="Panoplie du Craqueleur" command="item addset 26 %p true"/>
+					<item type="sendCommand" label="Panoplie du Bouftou Royal" command="item addset 4 %p true"/>
+					<item type="sendCommand" label="Panoplie du Dindo" command="item addset 42 %p true"/>
+					<item type="sendCommand" label="Panoplie du Boufcoul" command="item addset 43 %p true"/>
+					<item type="sendCommand" label="Panoplie du Koalak" command="item addset 46 %p true"/>
+				</item>	
+				<item type="Menu" label="Panoplies Niveau 51-100">
+					<item type="sendCommand" label="Panoplie du Kitsou" command="item addset 41 %p true"/>
+					<item type="sendCommand" label="Panoplie du Mulou" command="item addset 32 %p true"/>
+					<item type="sendCommand" label="Panoplie Gelax" command="item addset 6 %p true"/>
+					<item type="sendCommand" label="Panoplie du Wa Wabbit" command="item addset 40 %p true"/>
+					<item type="sendCommand" label="Panoplie Aerdala" command="item addset 35 %p true"/>
+					<item type="sendCommand" label="Panoplie du Koulosse" command="item addset 44 %p true"/>
+					<item type="sendCommand" label="Panoplie Tortue" command="item addset 9 %p true"/>
+					<item type="sendCommand" label="Panoplie du Wabbit" command="item addset 11 %p true"/>
+					<item type="sendCommand" label="Panoplie du Chef Crocodaille" command="item addset 20 %p true"/>
+					<item type="sendCommand" label="Panoplie du O'Boul" command="item addset 36 %p true"/>
+					<item type="sendCommand" label="Panoplie du de Farle Ingalsse" command="item addset 17 %p true"/>
+					<item type="sendCommand" label="Panoplie du Terrdala" command="item addset 36 %p true"/>
+					<item type="sendCommand" label="Panoplie du Feudala" command="item addset 37 %p true"/>
+					<item type="sendCommand" label="Panoplie du Chef Bwork" command="item addset 19 %p true"/>
+				</item>
+		
+			<item type="Menu" label="Panoplies Niveau 100-150" command="item add 1575 %p">
+					<item type="sendCommand" label="Panoplie d'Elia Wood" command="item addset 38 %p true"/>
+			</item>	
+			<item type="Menu" label="Panoplies Niveau 150-200">
+			</item>
+			<item type="Menu" label="Panoplies Tournois">
+					<item type="sendCommand" label="Panoplie du Champion" command="item addset 45 %p true"/>
+			</item>
+	</item>	
+	<item type="menu" label="16. Sorts">
+		<item type="Static" label="Sorts de Classe"/>
+			<item type="Menu" label="Féca">
+					<item type="sendCommand" label="Attaque Naturelle" command="spell add 3 %p"/>
+					<item type="sendCommand" label="Armure Terrestre" command="spell add 6 %p"/>
+					<item type="sendCommand" label="Glyphe Agressif" command="spell add 17 %p"/>
+					<item type="sendCommand" label="Renvoi de Sort" command="spell add 4 %p"/>
+					<item type="sendCommand" label="Aveuglement" command="spell add 2 %p"/>
+					<item type="sendCommand" label="Armure Incandescente" command="spell add 1 %p"/>
+					<item type="sendCommand" label="Attaque Nuageuse" command="spell add 9 %p"/>
+					<item type="sendCommand" label="Armure Aqueuse" command="spell add 18 %p"/>
+					<item type="sendCommand" label="Immunité" command="spell add 20 %p"/>
+					<item type="sendCommand" label="Armure Venteuse" command="spell add 14 %p"/>
+					<item type="sendCommand" label="Bulle" command="spell add 19 %p"/>
+					<item type="sendCommand" label="Trêve" command="spell add 5 %p"/>
+					<item type="sendCommand" label="Fraction" command="spell add 16 %p"/>
+					<item type="sendCommand" label="Retour du Bâton" command="spell add 8 %p"/>
+					<item type="sendCommand" label="Glyphe d'Aveuglement" command="spell add 12 %p"/>
+					<item type="sendCommand" label="Téléportation" command="spell add 11 %p"/>
+					<item type="sendCommand" label="Glyphe Enflammé" command="spell add 10 %p"/>
+					<item type="sendCommand" label="Bouclier Féca" command="spell add 7 %p"/>
+					<item type="sendCommand" label="Glyphe d'Immobilisation" command="spell add 15 %p"/>
+					<item type="sendCommand" label="Glyphe de Répulsion" command="spell add 13 %p"/>
+					<item type="sendCommand" label="Invocation du Dopeul Féca" command="spell add 1901 %p"/>
+			</item>
+			<item type="Menu" label="Osamodas">
+					<item type="sendCommand" label="Griffe Spectrale" command="spell add 21 %p"/>
+					<item type="sendCommand" label="Résistance Naturelle" command="spell add 32 %p"/>
+					<item type="sendCommand" label="Invocation de Tofu" command="spell add 34 %p"/>
+					<item type="sendCommand" label="Bénédiction Animale" command="spell add 26 %p"/>
+					<item type="sendCommand" label="Déplacement Félin" command="spell add 26 %p"/>
+					<item type="sendCommand" label="Invocation de Bouftou" command="spell add 35 %p"/>
+					<item type="sendCommand" label="Crapaud" command="spell add 28 %p"/>
+					<item type="sendCommand" label="Invocation de Prespic" command="spell add 37 %p"/>
+					<item type="sendCommand" label="Fouet" command="spell add 30 %p"/>		
+					<item type="sendCommand" label="Piqûre Motivante" command="spell add 27 %p"/>
+					<item type="sendCommand" label="Corbeau" command="spell add 24 %p"/>
+					<item type="sendCommand" label="Criffe Cinglante" command="spell add 33 %p"/>
+					<item type="sendCommand" label="Soin Animal" command="spell add 25 %p"/>
+					<item type="sendCommand" label="Invocation de Sanglier" command="spell add 38 %p"/>
+					<item type="sendCommand" label="Frappe du Craqueleur" command="spell add 36 %p"/>
+					<item type="sendCommand" label="Cri de l'Ours" command="spell add 23 %p"/>
+					<item type="sendCommand" label="Invocation de Bwork Mage" command="spell add 39 %p"/>
+					<item type="sendCommand" label="Crocs de Mulou" command="spell add 29 %p"/>
+					<item type="sendCommand" label="Invocation de Craqueleur" command="spell add 40 %p"/>
+					<item type="sendCommand" label="Invocation de Dragonnet Rouge" command="spell add 31 %p"/>
+					<item type="sendCommand" label="Invocation du Dopeul Osamodas" command="spell add 1902 %p"/>
+			</item>
+			<item type="Menu" label="Enutrof">
+					<item type="sendCommand" label="Sac Animé" command="spell add 41 %p"/>
+					<item type="sendCommand" label="Lancer de Pelle" command="spell add 43 %p"/>
+					<item type="sendCommand" label="Lancer de Pièces" command="spell add 51 %p"/>
+					<item type="sendCommand" label="Pelle Fantomatique" command="spell add 44 %p"/>
+					<item type="sendCommand" label="Accélération" command="spell add 55 %p"/>
+					<item type="sendCommand" label="Boîte de Pandore" command="spell add 47 %p"/>
+					<item type="sendCommand" label="Remblai" command="spell add 48 %p"/>
+					<item type="sendCommand" label="Clé Réductrice" command="spell add 45 %p"/>
+					<item type="sendCommand" label="Force de l'Âge" command="spell add 53 %p"/>		
+					<item type="sendCommand" label="Pelle Animée" command="spell add 57 %p"/>
+					<item type="sendCommand" label="Cupidité" command="spell add 52 %p"/>
+					<item type="sendCommand" label="Roulage de Pelle" command="spell add 44 %p"/>
+					<item type="sendCommand" label="Maladresse" command="spell add 50 %p"/>
+					<item type="sendCommand" label="Maladresse de Masse" command="spell add 54 %p"/>
+					<item type="sendCommand" label="Chance" command="spell add 42 %p"/>
+					<item type="sendCommand" label="Pelle du Jugement" command="spell add 56 %p"/>
+					<item type="sendCommand" label="Pelle Massacrante" command="spell add 58 %p"/>
+					<item type="sendCommand" label="Corruption" command="spell add 59 %p"/>
+					<item type="sendCommand" label="Désinvocation" command="spell add 48 %p"/>
+					<item type="sendCommand" label="Coffre Animé" command="spell add 60 %p"/>
+					<item type="sendCommand" label="Invocation de Dopeul Enutrof" command="spell add 1903 %p"/>
+			</item>
+			<item type="Menu" label="Sram">
+     				<item type="sendCommand" label="Poisse" command="spell add 416 %p"/>
+     				<item type="sendCommand" label="Sournoiserie" command="spell add 61 %p"/>
+     				<item type="sendCommand" label="Piège Sournois" command="spell add 65 %p"/>
+     				<item type="sendCommand" label="Invisibilité" command="spell add 72 %p"/>
+     				<item type="sendCommand" label="Poison Insidieux" command="spell add 66  %p"/>
+     				<item type="sendCommand" label="Fourvoiement" command="spell add 68 %p"/>
+     				<item type="sendCommand" label="Coup Sournois" command="spell add 63 %p"/>
+     				<item type="sendCommand" label="Double" command="spell add 74 %p"/>
+     				<item type="sendCommand" label="Pulsion de Chakra" command="spell add 74  %p"/>  
+     				<item type="sendCommand" label="Piège de masse" command="spell add 79 %p"/>
+    				<item type="sendCommand" label="Invisibilité d'autrui" command="spell add 78 %p"/>
+    				<item type="sendCommand" label="Concentration de chakra" command="spell add 62  %p"/>
+    				<item type="sendCommand" label="Piège d'immobilisation" command="spell add 69  %p"/>
+    				<item type="sendCommand" label="Piège de silence" command="spell add 77 %p"/>
+    				<item type="sendCommand" label="Piège Répulsif" command="spell add 73 %p"/>
+    				<item type="sendCommand" label="Peur" command="spell add 67 %p"/>
+    				<item type="sendCommand" label="Arnaque" command="spell add 70 %p"/>
+    				<item type="sendCommand" label="Repérage" command="spell add 64 %p"/>
+    				<item type="sendCommand" label="Attaque Mortelle" command="spell add 76 %p"/>
+    				<item type="sendCommand" label="Piège Mortel" command="spell add 80 %p"/>
+     				<item type="sendCommand" label="Dopeul Sram" command="spell add 1904 %p"/>
+			</item>
+			<item type="Menu" label="Xélor">
+					<item type="sendCommand" label="Ralentissement" command="spell add 81 %p"/>
+					<item type="sendCommand" label="Rembobinage" command="spell add 94 %p"/>
+					<item type="sendCommand" label="Aiguille" command="spell add 83 %p"/>
+					<item type="sendCommand" label="Gelure" command="spell add 84 %p"/>
+					<item type="sendCommand" label="Sablier du Xélor" command="spell add 100 %p"/>
+					<item type="sendCommand" label="Rayon Obscur" command="spell add 92 %p"/>
+					<item type="sendCommand" label="Téléportation" command="spell add 88 %p"/>
+					<item type="sendCommand" label="Flétrissement" command="spell add 93 %p"/>
+					<item type="sendCommand" label="Flou" command="spell add 85 %p"/>  
+					<item type="sendCommand" label="Poussière Temporelle" command="spell add 96 %p"/>
+					<item type="sendCommand" label="Vol du Temps" command="spell add 98 %p"/>
+					<item type="sendCommand" label="Aiguille Chercheuse" command="spell add 86 %p"/>
+					<item type="sendCommand" label="Dévouement" command="spell add 89 %p"/>
+					<item type="sendCommand" label="Fuite" command="spell add 90 %p"/>
+					<item type="sendCommand" label="Démotivation" command="spell add 87 %p"/>
+					<item type="sendCommand" label="Contre" command="spell add 82 %p"/>
+					<item type="sendCommand" label="Momification" command="spell add 99 %p"/>
+					<item type="sendCommand" label="Horloge" command="spell add 95 %p"/>
+					<item type="sendCommand" label="Frappe de Xélor" command="spell add 91 %p"/>
+					<item type="sendCommand" label="Cadran de Xélor" command="spell add 97 %p"/>
+					<item type="sendCommand" label="Invocation de Dopeul Xélor" command="spell add 1905 %p"/>
+			</item>
+		<item type="Menu" label="Ecaflip">
+					<item type="sendCommand" label="Pile ou Face" command="spell add 102 %p"/>
+					<item type="sendCommand" label="Chance d'Ecaflip" command="spell add 103 %p"/>
+					<item type="sendCommand" label="Bond du Félin" command="spell add 105 %p"/>
+					<item type="sendCommand" label="Bluff" command="spell add 109 %p"/>
+					<item type="sendCommand" label="Perception" command="spell add 113 %p"/>
+					<item type="sendCommand" label="Contrecoup" command="spell add 111 %p"/>
+					<item type="sendCommand" label="Griffe Invocatrice" command="spell add 117 %p"/>
+					<item type="sendCommand" label="Tout ou Rien" command="spell add 119 %p"/>
+					<item type="sendCommand" label="Roulette" command="spell add 101 %p"/>  
+					<item type="sendCommand" label="Topkaj" command="spell add 107 %p"/>
+					<item type="sendCommand" label="Langue Râpeuse" command="spell add 116 %p"/>
+					<item type="sendCommand" label="Roue de la Fortune" command="spell add 106 %p"/>
+					<item type="sendCommand" label="Esprit Félin" command="spell add 108 %p"/>
+					<item type="sendCommand" label="Trèfle" command="spell add 104 %p"/>
+					<item type="sendCommand" label="Odorat" command="spell add 115 %p"/>
+					<item type="sendCommand" label="Réflexes" command="spell add 118 %p"/>
+					<item type="sendCommand" label="Griffe Joueuse" command="spell add 110 %p"/>
+					<item type="sendCommand" label="Griffe de Ceangal" command="spell add 112 %p"/>
+					<item type="sendCommand" label="Rekop" command="spell add 114 %p"/>
+					<item type="sendCommand" label="Destin d'Ecaflip" command="spell add 120 %p"/>
+					<item type="sendCommand" label="Invocation de Dopeul Ecaflip" command="spell add 1906 %p"/>
+			</item>
+			<item type="Menu" label="Eniripsa">
+					<item type="sendCommand" label="Mot Curatif" command="spell add 121 %p"/>
+					<item type="sendCommand" label="Mot Interdit" command="spell add 125 %p"/>
+					<item type="sendCommand" label="Mot de Frayeur" command="spell add 128 %p"/>
+					<item type="sendCommand" label="Mot Soignant" command="spell add 124 %p"/>
+					<item type="sendCommand" label="Mot Blaissant" command="spell add 122 %p"/>
+					<item type="sendCommand" label="Mot Stimulant" command="spell add 126 %p"/>
+					<item type="sendCommand" label="Mot de Prévention" command="spell add 127 %p"/>
+					<item type="sendCommand" label="Mot Drainant" command="spell add 123 %p"/>
+					<item type="sendCommand" label="Mot Revitalisant" command="spell add 130 %p"/>		
+					<item type="sendCommand" label="Mot de Régénération" command="spell add 131 %p"/>
+					<item type="sendCommand" label="Mot d'Epine" command="spell add 132 %p"/>
+					<item type="sendCommand" label="Mot de Jouvence" command="spell add 133 %p"/>
+					<item type="sendCommand" label="Mot Vampirique" command="spell add 134 %p"/>
+					<item type="sendCommand" label="Mot de Sacrifice" command="spell add 135 %p"/>
+					<item type="sendCommand" label="Mot d'Amitié" command="spell add 129 %p"/>
+					<item type="sendCommand" label="Mot d'Immobilisation" command="spell add 136 %p"/>
+					<item type="sendCommand" label="Mot d'Envol" command="spell add 137 %p"/>
+					<item type="sendCommand" label="Mot de Silence" command="spell add 138 %p"/>
+					<item type="sendCommand" label="Mot d'Altruisme" command="spell add 139 %p"/>
+					<item type="sendCommand" label="Mot de Reconstitution" command="spell add 140 %p"/>
+					<item type="sendCommand" label="Invocation du Dopeul Eniripsa" command="spell add 1907 %p"/>
+			</item>
+			<item type="Menu" label="Iop">
+					<item type="sendCommand" label="Pression" command="spell add 141 %p"/>
+					<item type="sendCommand" label="Bond" command="spell add 142 %p"/>
+					<item type="sendCommand" label="Intimidation" command="spell add 143 %p"/>
+					<item type="sendCommand" label="Vitalité" command="spell add 155 %p"/>
+					<item type="sendCommand" label="Epée Divine" command="spell add 145 %p"/>
+					<item type="sendCommand" label="Epée Destructrice" command="spell add 154 %p"/>
+					<item type="sendCommand" label="Poutch" command="spell add 147 %p"/>
+					<item type="sendCommand" label="Souffle" command="spell add 151 %p"/>		
+					<item type="sendCommand" label="Concentration" command="spell add 158 %p"/>
+					<item type="sendCommand" label="Couper" command="spell add 150 %p"/>
+					<item type="sendCommand" label="Friction" command="spell add 148 %p"/>
+					<item type="sendCommand" label="Duel" command="spell add 144 %p"/>
+					<item type="sendCommand" label="Epée du Jugement" command="spell add 152 %p"/>
+					<item type="sendCommand" label="Puissance" command="spell add 153 %p"/>
+					<item type="sendCommand" label="Précipitation" command="spell add 149 %p"/>
+					<item type="sendCommand" label="Tempête de Puissance" command="spell add 156 %p"/>
+					<item type="sendCommand" label="Epée Celeste" command="spell add 157 %p"/>
+					<item type="sendCommand" label="Epée de Iop" command="spell add 160 %p"/>
+					<item type="sendCommand" label="Epée du Destin" command="spell add 146 %p"/>
+					<item type="sendCommand" label="Colère de Iop" command="spell add 159 %p"/>
+					<item type="sendCommand" label="Invocation de Dopeul Iop" command="spell add 1908 %p"/>
+
+			</item>
+			<item type="Menu" label="Crâ">
+					<item type="sendCommand" label="Flèche Magique" command="spell add 161 %p"/>
+					<item type="sendCommand" label="Flèche Empoisonnée" command="spell add 164 %p"/>
+					<item type="sendCommand" label="Flèche de Recul" command="spell add 169 %p"/>
+					<item type="sendCommand" label="Flèche Glacée" command="spell add 163 %p"/>
+					<item type="sendCommand" label="Flèche Enflamée" command="spell add 165 %p"/>
+					<item type="sendCommand" label="Tir Eloigné" command="spell add 172 %p"/>
+					<item type="sendCommand" label="Flèche d'Expiation" command="spell add 167 %p"/>
+					<item type="sendCommand" label="Œil de Taupe" command="spell add 168 %p"/>
+					<item type="sendCommand" label="Tir Critique" command="spell add 162 %p"/>		
+					<item type="sendCommand" label="Flèche d'Immobilisation" command="spell add 168 %p"/>
+					<item type="sendCommand" label="Flèche Punitive" command="spell add 171 %p"/>
+					<item type="sendCommand" label="Tir Puissant" command="spell add 166 %p"/>
+					<item type="sendCommand" label="Flèche Harcelante" command="spell add 173 %p"/>
+					<item type="sendCommand" label="Flèche Cinglante" command="spell add 174 %p"/>
+					<item type="sendCommand" label="Flèche Persécutrice" command="spell add 176 %p"/>
+					<item type="sendCommand" label="Flèche Destructrice" command="spell add 175 %p"/>
+					<item type="sendCommand" label="Flèche Absorbante" command="spell add 178 %p"/>
+					<item type="sendCommand" label="Flèche Ralentissante" command="spell add 177 %p"/>
+					<item type="sendCommand" label="Flèche Explosive" command="spell add 179 %p"/>
+					<item type="sendCommand" label="Maîtrise de 'Arc" command="spell add 180 %p"/>
+					<item type="sendCommand" label="Invocation de Dopeul Crâ" command="spell add 1909 %p"/>
+			</item>
+			<item type="Menu" label="Sadida">
+					<item type="sendCommand" label="Ronce" command="spell add 182 %p"/>
+					<item type="sendCommand" label="La Bloqueuse" command="spell add 193 %p"/>
+					<item type="sendCommand" label="Poison Paralysant" command="spell add 200 %p"/>
+					<item type="sendCommand" label="Sacrifice Poupesque" command="spell add 198 %p"/>
+					<item type="sendCommand" label="Larme" command="spell add 195 %p"/>
+					<item type="sendCommand" label="La Folle" command="spell add 182 %p"/>
+					<item type="sendCommand" label="Ronce Apaisante" command="spell add 192 %p"/>
+					<item type="sendCommand" label="Puissance Sylvestre" command="spell add 197 %p"/>
+					<item type="sendCommand" label="La Sacrifiée" command="spell add 189 %p"/>		
+					<item type="sendCommand" label="Tremblement" command="spell add 181 %p"/>
+					<item type="sendCommand" label="Connaissance des Poupées" command="spell add 199 %p"/>
+					<item type="sendCommand" label="Ronces Multiples" command="spell add 192 %p"/>
+					<item type="sendCommand" label="Arbre" command="spell add 186 %p"/>
+					<item type="sendCommand" label="Vent Empoisonné" command="spell add 196 %p"/>
+					<item type="sendCommand" label="La Gonflable" command="spell add 190 %p"/>
+					<item type="sendCommand" label="Ronces Agressives" command="spell add 183 %p"/>
+					<item type="sendCommand" label="Herbes Folle" command="spell add 185 %p"/>
+					<item type="sendCommand" label="Feu de Brousse" command="spell add 184 %p"/>
+					<item type="sendCommand" label="Ronce Insolente" command="spell add 188 %p"/>
+					<item type="sendCommand" label="La Surpuissante" command="spell add 187 %p"/>
+					<item type="sendCommand" label="Invocation du Dopeul Sadida" command="spell add 1910 %p"/>
+			</item>
+			<item type="Menu" label="Sacrieur">
+					<item type="sendCommand" label="Châtiment Forcé" command="spell add 431 %p"/>
+					<item type="sendCommand" label="Pied du Sacrieur" command="spell add 432 %p"/>
+					<item type="sendCommand" label="Attirance" command="spell add 434 %p"/>
+					<item type="sendCommand" label="Dérobade" command="spell add 444 %p"/>
+					<item type="sendCommand" label="Détour" command="spell add 449 %p"/>
+					<item type="sendCommand" label="Assaut" command="spell add 436 %p"/>
+					<item type="sendCommand" label="Châtiment Agile" command="spell add 437 %p"/>
+					<item type="sendCommand" label="Dissolution" command="spell add 439 %p"/>
+					<item type="sendCommand" label="Châtiment Osé" command="spell add 433 %p"/>		
+					<item type="sendCommand" label="Châtiment Spirituel" command="spell add 443 %p"/>
+					<item type="sendCommand" label="Sacrifice" command="spell add 440 %p"/>
+					<item type="sendCommand" label="Absorption" command="spell add 442 %p"/>
+					<item type="sendCommand" label="Châtiment Vitalesque" command="spell add 441 %p"/>
+					<item type="sendCommand" label="Coopération" command="spell add 445 %p"/>
+					<item type="sendCommand" label="Transposition" command="spell add 438 %p"/>
+					<item type="sendCommand" label="Punition" command="spell add 446 %p"/>
+					<item type="sendCommand" label="Furie" command="spell add 447 %p"/>
+					<item type="sendCommand" label="Epée volante" command="spell add 448 %p"/>
+					<item type="sendCommand" label="Transfert de Vie" command="spell add 435 %p"/>
+					<item type="sendCommand" label="Folie Sanguinaire" command="spell add 450 %p"/>
+					<item type="sendCommand" label="Invocation du Dopeul Sacrieur" command="spell add 1911 %p"/>
+			</item>
+			<item type="Menu" label="Pandawa">
+					<item type="sendCommand" label="Picole" command="spell add 686 %p"/>
+					<item type="sendCommand" label="Poing Enflammé" command="spell add 687 %p"/>
+					<item type="sendCommand" label="Geule de Bois" command="spell add 692 %p"/>
+					<item type="sendCommand" label="Epouvante" command="spell add 689 %p"/>
+					<item type="sendCommand" label="Souffle Alcoolisé" command="spell add 690 %p"/>
+					<item type="sendCommand" label="Lait de Bambou" command="spell add 699 %p"/>
+					<item type="sendCommand" label="Schnaps" command="spell add 688 %p"/>
+					<item type="sendCommand" label="Karcham" command="spell add 693 %p"/>		
+					<item type="sendCommand" label="Vertige" command="spell add 694 %p"/>
+					<item type="sendCommand" label="Stabilisation" command="spell add 695 %p"/>
+					<item type="sendCommand" label="Chamrak" command="spell add 696 %p"/>
+					<item type="sendCommand" label="Ethylo" command="spell add 697 %p"/>
+					<item type="sendCommand" label="Souillure" command="spell add 698 %p"/>
+					<item type="sendCommand" label="Vulnérabilité" command="spell add 691 %p"/>
+					<item type="sendCommand" label="Vague à Lame" command="spell add 700 %p"/>
+					<item type="sendCommand" label="Colère de Zatoïshwan" command="spell add 701 %p"/>
+					<item type="sendCommand" label="Flasque Explosive" command="spell add 702 %p"/>
+					<item type="sendCommand" label="Pandatak" command="spell add 703 %p"/>
+					<item type="sendCommand" label="Pandanlku" command="spell add 704 %p"/>
+					<item type="sendCommand" label="Lien Spiritueux" command="spell add 705 %p"/>
+					<item type="sendCommand" label="Invocation du Dopeul Pandawa" command="spell add 1912 %p"/>
+			</item>
+			<item type="Menu" label="Roublard">
+					<item type="sendCommand" label="Détonateur" command="spell add 2778 %p"/>
+					<item type="sendCommand" label="Extraction" command="spell add 2794 %p"/>
+					<item type="sendCommand" label="Explobombe" command="spell add 2808 %p"/>
+					<item type="sendCommand" label="Botte" command="spell add 2795 %p"/>
+					<item type="sendCommand" label="Roublardise" command="spell add 2763 %p"/>
+					<item type="sendCommand" label="Tornabombe" command="spell add 2796 %p"/>
+					<item type="sendCommand" label="Aimantation" command="spell add 2801 %p"/>
+					<item type="sendCommand" label="Dagues Boomerang" command="spell add 2802 %p"/>
+					<item type="sendCommand" label="Entourloupe" command="spell add 2803 %p"/>		
+					<item type="sendCommand" label="Resquille" command="spell add 2807 %p"/>
+					<item type="sendCommand" label="Bombe à Eau" command="spell add 2797 %p"/>
+					<item type="sendCommand" label="Pulsar" command="spell add 2806 %p"/>
+					<item type="sendCommand" label="Poudre" command="spell add 2805 %p"/>
+					<item type="sendCommand" label="Rémission" command="spell add 2809 %p"/>
+					<item type="sendCommand" label="Espingole" command="spell add 2804 %p"/>
+					<item type="sendCommand" label="Dernier Souffle" command="spell add 2810 %p"/>
+					<item type="sendCommand" label="Surcharge" command="spell add 2812 %p"/>
+					<item type="sendCommand" label="Tromblon" command="spell add 2813 %p"/>
+					<item type="sendCommand" label="Kaboom" command="spell add 2815 %p"/>
+					<item type="sendCommand" label="Invocation du Dopeul Roublard" command="spell add 2817 %p"/>
+			</item>
+			<item type="Menu" label="Zobal">
+					<item type="sendCommand" label="Masque du Pleutre" command="spell add 2879 %p"/>
+					<item type="sendCommand" label="Martelo" command="spell add 2881 %p"/>
+					<item type="sendCommand" label="Appui" command="spell add 2896 %p"/>
+					<item type="sendCommand" label="Picada" command="spell add 2899 %p"/>
+					<item type="sendCommand" label="Reuche" command="spell add 2893 %p"/>
+					<item type="sendCommand" label="Torturuga" command="spell add 2891 %p"/>
+					<item type="sendCommand" label="Masque de Classe" command="spell add 2872 %p"/>
+					<item type="sendCommand" label="Rétention" command="spell add 2882 %p"/>
+					<item type="sendCommand" label="Masque du Psychopathe" command="spell add 2880 %p"/>		
+					<item type="sendCommand" label="Furia" command="spell add 2287 %p"/>
+					<item type="sendCommand" label="Distance" command="spell add 2885 %p"/>
+					<item type="sendCommand" label="Plastron" command="spell add 2890 %p"/>
+					<item type="sendCommand" label="Fougue" command="spell add 2895 %p"/>
+					<item type="sendCommand" label="Débandade" command="spell add 2894 %p"/>
+					<item type="sendCommand" label="Cabriole" command="spell add 2888 %p"/>
+					<item type="sendCommand" label="Appeau" command="spell add 2883 %p"/>
+					<item type="sendCommand" label="Transe" command="spell add 2892 %p"/>
+					<item type="sendCommand" label="Apathie" command="spell add 2886 %p"/>
+					<item type="sendCommand" label="Boliche" command="spell add 2889 %p"/>
+					<item type="sendCommand" label="Mascarade" command="spell add 2897 %p"/>
+					<item type="sendCommand" label="Invocation du Dopeul Zobal" command="spell add 2898 %p"/>
+			</item>
+			<item type="Menu" label="Steameur">
+					<item type="sendCommand" label="Flibuste" command="spell add 3206 %p"/>
+					<item type="sendCommand" label="Ancrage" command="spell add 3210 %p"/>
+					<item type="sendCommand" label="Harponneuse" command="spell add 3212 %p"/>
+					<item type="sendCommand" label="Evolution" command="spell add 3215 %p"/>
+					<item type="sendCommand" label="Courant" command="spell add 3203 %p"/>
+					<item type="sendCommand" label="Armure de Sel" command="spell add 3217 %p"/>
+					<item type="sendCommand" label="Scaphandre" command="spell add 3202 %p"/>
+					<item type="sendCommand" label="Gardienne" command="spell add 3213 %p"/>
+					<item type="sendCommand" label="Ressac" command="spell add 3204 %p"/>		
+					<item type="sendCommand" label="Marrée" command="spell add 3205 %p"/>
+					<item type="sendCommand" label="Vapor" command="spell add 3209 %p"/>
+					<item type="sendCommand" label="Aspiration" command="spell add 3221 %p"/>
+					<item type="sendCommand" label="Tactirelle" command="spell add 3214 %p"/>
+					<item type="sendCommand" label="Longue Vue" command="spell add 3220 %p"/>
+					<item type="sendCommand" label="Secourisme" command="spell add 3219 %p"/>
+					<item type="sendCommand" label="Selpâtre" command="spell add 3207 %p"/>
+					<item type="sendCommand" label="Embuscade" command="spell add 3218 %p"/>
+					<item type="sendCommand" label="Écume" command="spell add 3208 %p"/>
+					<item type="sendCommand" label="Fouène" command="spell add 3211 %p"/>
+					<item type="sendCommand" label="Cuirasse" command="spell add 3216 %p"/>
+					<item type="sendCommand" label="Invocation du Dopeul Steameur" command="spell add 2899 %p"/>
+			</item>
+	</item>	
+				<item type="menu" label="17. Ornements / Titres">
+				<item type="static" label="Général" />
+				<item type="sendcommand" label="All titles" command="title add %p -all" />
+				<item type="sendcommand" label="All ornements" command="ornements add %p -all" />
+				<item type="static" label="Liste" />
+				<item type="menu" label="Ornements" >
+				    <item type="menu" label="Level" >
+					<item type="sendCommand" label="100" command="ornement add %p 13" />
+					<item type="sendCommand" label="160" command="ornement add %p 14" />
+					<item type="sendCommand" label="200" command="ornement add %p 15" />
+					</item>
+					
+					<item type="menu" label="Score" >
+					<item type="sendCommand" label="Honorable" command="ornement add %p 16" />
+					<item type="sendCommand" label="Respectable" command="ornement add %p 17" />
+					<item type="sendCommand" label="Imposant" command="ornement add %p 18" />
+					<item type="sendCommand" label="[(STAFF)] Remarquable" command="ornement add %p 60" />
+					</item>
+					
+					<item type="menu" label="Explorateur" >
+					<item type="sendCommand" label="Honorable" command="ornement add %p 19" />
+					<item type="sendCommand" label="Respectable" command="ornement add %p 20" />
+					<item type="sendCommand" label="Imposant" command="ornement add %p 21" />
+					</item>
+					
+					<item type="menu" label="Baroudeur" >
+					<item type="sendCommand" label="Honorable" command="ornement add %p 22" />
+					<item type="sendCommand" label="Respectable" command="ornement add %p 23" />
+					<item type="sendCommand" label="Imposant" command="ornement add %p 24" />
+					<item type="sendCommand" label="Vénérable" command="ornement add %p 25" />
+					<item type="sendCommand" label="Eminent" command="ornement add %p 50" />
+					</item>
+					
+					<item type="menu" label="Batailleur" >
+					<item type="sendCommand" label="Honorable" command="ornement add %p 27" />
+					<item type="sendCommand" label="Respectable" command="ornement add %p 28" />
+					<item type="sendCommand" label="Imposant" command="ornement add %p 29" />
+					<item type="sendCommand" label="Vénérable" command="ornement add %p 30" />
+					<item type="sendCommand" label="Glorieux" command="ornement add %p 51" />
+					</item>
+					
+					<item type="menu" label="Bagarreur" >
+					<item type="sendCommand" label="Honorable" command="ornement add %p 31" />
+					<item type="sendCommand" label="Respectable" command="ornement add %p 32" />
+					<item type="sendCommand" label="Imposant" command="ornement add %p 33" />
+					</item>
+					
+					<item type="menu" label="Chalongeur" >
+					<item type="sendCommand" label="Honorable" command="ornement add %p 34" />
+					<item type="sendCommand" label="Respectable" command="ornement add %p 35" />
+					</item>
+					
+					<item type="menu" label="Flocon" >
+					<item type="sendCommand" label="Honorable" command="ornement add %p 36" />
+					<item type="sendCommand" label="Respectable" command="ornement add %p 37" />
+					<item type="sendCommand" label="Imposant" command="ornement add %p 38" />
+					</item>
+					
+					<item type="menu" label="Aventurier" >
+					<item type="sendCommand" label="Honorable" command="ornement add %p 40" />
+					<item type="sendCommand" label="Respectable" command="ornement add %p 41" />
+					</item>
+					
+					<item type="menu" label="Dégivreur" >
+					<item type="sendCommand" label="Honorable" command="ornement add %p 42" />
+					<item type="sendCommand" label="Respectable" command="ornement add %p 43" />
+					<item type="sendCommand" label="Imposant" command="ornement add %p 44" />
+					</item>
+					
+					<item type="menu" label="Dragomaitre" >
+					<item type="sendCommand" label="Honorable" command="ornement add %p 46" />
+					<item type="sendCommand" label="Respectable" command="ornement add %p 47" />
+					<item type="sendCommand" label="Imposant" command="ornement add %p 48" />
+					</item>
+					
+					<item type="menu" label="Dimensions" >
+					<item type="sendCommand" label="Enutrosor" command="ornement add %p 58" />
+					<item type="sendCommand" label="Srambad" command="ornement add %p 59" />
+					</item>
+					
+					<item type="menu" label="Divers" >
+					<item type="sendCommand" label="Cawotteur" command="ornement add %p 55" />
+					<item type="sendCommand" label="Vulkanologue Honorable" command="ornement add %p 52" />
+					<item type="sendCommand" label="Vigilant" command="ornement add %p 26" />
+					<item type="sendCommand" label="Artisan Honorable" command="ornement add %p 45" />
+					<item type="sendCommand" label="Justicier" command="ornement add %p 56" />
+					<item type="sendCommand" label="Quêteur" command="ornement add %p 57" />
+		
+					</item>
+		</item>
+			</item>	
+	<item type="loadXML" label="&lt;font color='#9EFD38'&gt;Reload XML&lt;/font&gt;"/>
+
+</menu>

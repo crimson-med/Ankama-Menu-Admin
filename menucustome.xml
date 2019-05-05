@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<menu>
+	<!--MENUCUSTOM V 1.0 CUSTOM SYDORIA GAMES 2014-->
+	<item type="static" label="Custom" />
+	<item type="menu" label="Ornements">
+	    <item type="menu" label="Level" >
+		<item type="sendCommand" label="100" command="ornement add %p 13" />
+		<item type="sendCommand" label="160" command="ornement add %p 14" />
+		<item type="sendCommand" label="200" command="ornement add %p 15" />
+		</item>
+		
+		<item type="menu" label="Score" >
+		<item type="sendCommand" label="Honorable" command="ornement add %p 16" />
+		<item type="sendCommand" label="Respectable" command="ornement add %p 17" />
+		<item type="sendCommand" label="Imposant" command="ornement add %p 18" />
+		<item type="sendCommand" label="[(STAFF)] Remarquable" command="ornement add %p 60" />
+		</item>
+		
+		<item type="menu" label="Explorateur" >
+		<item type="sendCommand" label="Honorable" command="ornement add %p 19" />
+		<item type="sendCommand" label="Respectable" command="ornement add %p 20" />
+		<item type="sendCommand" label="Imposant" command="ornement add %p 21" />
+		</item>
+		
+		<item type="menu" label="Baroudeur" >
+		<item type="sendCommand" label="Honorable" command="ornement add %p 22" />
+		<item type="sendCommand" label="Respectable" command="ornement add %p 23" />
+		<item type="sendCommand" label="Imposant" command="ornement add %p 24" />
+		<item type="sendCommand" label="Vénérable" command="ornement add %p 25" />
+		<item type="sendCommand" label="Eminent" command="ornement add %p 50" />
+		</item>
+		
+		<item type="menu" label="Batailleur" >
+		<item type="sendCommand" label="Honorable" command="ornement add %p 27" />
+		<item type="sendCommand" label="Respectable" command="ornement add %p 28" />
+		<item type="sendCommand" label="Imposant" command="ornement add %p 29" />
+		<item type="sendCommand" label="Vénérable" command="ornement add %p 30" />
+		<item type="sendCommand" label="Glorieux" command="ornement add %p 51" />
+		</item>
+		
+		<item type="menu" label="Bagarreur" >
+		<item type="sendCommand" label="Honorable" command="ornement add %p 31" />
+		<item type="sendCommand" label="Respectable" command="ornement add %p 32" />
+		<item type="sendCommand" label="Imposant" command="ornement add %p 33" />
+		</item>
+		
+		<item type="menu" label="Chalongeur" >
+		<item type="sendCommand" label="Honorable" command="ornement add %p 34" />
+		<item type="sendCommand" label="Respectable" command="ornement add %p 35" />
+		</item>
+		
+		<item type="menu" label="Flocon" >
+		<item type="sendCommand" label="Honorable" command="ornement add %p 36" />
+		<item type="sendCommand" label="Respectable" command="ornement add %p 37" />
+		<item type="sendCommand" label="Imposant" command="ornement add %p 38" />
+		</item>
+		
+		<item type="menu" label="Aventurier" >
+		<item type="sendCommand" label="Honorable" command="ornement add %p 40" />
+		<item type="sendCommand" label="Respectable" command="ornement add %p 41" />
+		</item>
+		
+		<item type="menu" label="Dégivreur" >
+		<item type="sendCommand" label="Honorable" command="ornement add %p 42" />
+		<item type="sendCommand" label="Respectable" command="ornement add %p 43" />
+		<item type="sendCommand" label="Imposant" command="ornement add %p 44" />
+		</item>
+		
+		<item type="menu" label="Dragomaitre" >
+		<item type="sendCommand" label="Honorable" command="ornement add %p 46" />
+		<item type="sendCommand" label="Respectable" command="ornement add %p 47" />
+		<item type="sendCommand" label="Imposant" command="ornement add %p 48" />
+		</item>
+		
+		<item type="menu" label="Dimensions" >
+		<item type="sendCommand" label="Enutrosor" command="ornement add %p 58" />
+		<item type="sendCommand" label="Srambad" command="ornement add %p 59" />
+		</item>
+		
+		<item type="menu" label="Divers" >
+		<item type="sendCommand" label="Cawotteur" command="ornement add %p 55" />
+		<item type="sendCommand" label="Vulkanologue Honorable" command="ornement add %p 52" />
+		<item type="sendCommand" label="Vigilant" command="ornement add %p 26" />
+		<item type="sendCommand" label="Artisan Honorable" command="ornement add %p 45" />
+		<item type="sendCommand" label="Justicier" command="ornement add %p 56" />
+		<item type="sendCommand" label="Quêteur" command="ornement add %p 57" />
+		
+		</item>
+		
+	</item>
+</menu>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Definition SYSTEM "../dtd/ui.dtd">
+<Definition usePropertiesCache="false">
+ 
+	<Import url="[config.mod.template.button]iconButton.xml" />
+	<Import url="[config.mod.template]button/labelCheckBox.xml" />
+    
+	<Constants>
+		<Constant name="assets" value="[config.ui.skin]assets.swf|" />
+		<Constant name="css" value="[config.ui.skin]css/" />
+		<Constant name="bitmap" value="[config.ui.skin]bitmap/" />	
+	</Constants>
+    
+	<Container name="mainCtr">
+		<Size>
+            <AbsDimension x="397" y="724" />
+        </Size>
+	        
+		<!-- Container qui contient tous les objets communs à toutes les interfaces d'inventaire  -->
+		<Container name="commonCtr">
+			<mouseEnabled>true</mouseEnabled>
+			
+			<!--  Container qui contient la partie 'haute' de l'interface. -->
+			<!--  C'est la partie qui ne change pas dans toutes les interfaces (excepté le déplacement en Y)  -->
+			
+			
+			<!-- background -->
+			<!-- Il sera amené à s'agrandir ou se réduire selon les différentes interfaces -->
+	        <Texture name="txBackground" strata="LOW">
+	            <Size>
+	                <AbsDimension x="397" y="724" />
+	            </Size>
+	            <autoGrid>true</autoGrid>
+	            <uri>[local.assets]tx_generalBackgroundWithTitle</uri>
+				<shadowColor>[colors.ui.shadow]</shadowColor>
+	        </Texture>
+	        
+	        <!-- Title -->
+	        <Label name="lblTitle">
+	            <Anchors> 
+	                <Anchor>
+	                    <AbsDimension x="16" y="15" />
+	                </Anchor>
+	            </Anchors>
+	            <Size>
+	                <AbsDimension x="356" y="35" />
+	            </Size>
+	            <css>[local.css]title.css</css>
+	            <text>[ui.common.inventory]</text>
+	        </Label>
+	        
+	        
+						
+			<!-- background 2 -->
+			 <Texture>
+				<Anchors>
+					<Anchor>
+						<AbsDimension x="19" y="60" />
+					</Anchor>
+				</Anchors>
+				<Size>
+					<AbsDimension x="360" y="618" />
+				</Size>
+				<uri>[local.assets]tx_blockBackground</uri>
+	            <autoGrid>true</autoGrid>
+			</Texture>
+	        
+	        
+	        <!-- Filter and search button -->
+	         
+	        <ComboBox name="cbFilter" strata="TOP">
+	        	<Anchors> 
+	                <Anchor>
+	                    <AbsDimension x="25" y="100" />
+	                </Anchor>
+	            </Anchors>
+	        	<Size>
+					<AbsDimension x="318" y="25" />
+				</Size>
+				<autoSelectMode>0</autoSelectMode>
+				<buttonTexture>[local.assets]btn_combobox</buttonTexture>
+				<listTexture>[local.assets]tx_combobox</listTexture>
+				<rendererArgs>[local.css]normal.css,,,[colors.grid.over],[colors.grid.selected]</rendererArgs>;
+				<scrollBarCss>[local.css]scrollBar.css</scrollBarCss>
+			</ComboBox>
+	         
+	        <Container name="searchCtr">
+	        	<visible>false</visible>
+	        	<Anchors> 
+	                <Anchor>
+	                    <AbsDimension x="25" y="100" />
+	                </Anchor>
+	            </Anchors>
+	            
+	            <Texture>
+					<Size>
+						<AbsDimension x="318" y="25" />
+					</Size>
+					<autoGrid>true</autoGrid>
+					<uri>[local.assets]tx_inputBackgroundDark</uri>
+				</Texture>
+	            
+	            <Input name="searchInput">
+	            	<Size>
+						<AbsDimension x="318" y="20" />
+					</Size>
+	            	<css>[local.css]normal.css</css>
+	            </Input>
+	        </Container>
+	         
+	         <iconButton name="btnSearch">
+	        	<Anchors> 
+	                <Anchor>
+	                    <AbsDimension x="347" y="100" />
+	                </Anchor>
+	            </Anchors>
+	            <Size>
+	            	<AbsDimension x="25" y="25" />
+	            </Size>
+	            <checkBox>true</checkBox>
+	        	<uri>[local.assets]btn_recherche</uri>
+	        </iconButton>
+	        
+	        
+	        <!-- Storage grid -->
+	        <Grid name="grid">
+	            <Anchors> 
+	                <Anchor>
+	                    <AbsDimension x="25" y="134" />
+	                </Anchor>
+	            </Anchors>
+	            <Size>
+	                <AbsDimension x="353" y="508" />
+	            </Size>
+	            <verticalScrollbarCss>[local.css]scrollBar.css</verticalScrollbarCss>
+				<slotWidth>325</slotWidth>
+				<slotHeight>49</slotHeight>
+	           <rendererName>InlineXmlGridRender</rendererName>
+                <rendererArgs>updateItemLine,[colors.grid.line]</rendererArgs>
+                <scrollDisplay>always</scrollDisplay>
+                <verticalScrollbarCss>[local.css]scrollBar.css</verticalScrollbarCss>
+                <Hooks>
+                    <onSelectItem />
+                </Hooks>
+
+
+                <Button name="btn_item">
+                    <Common>
+                        <Size>
+                            <AbsDimension x="333" y="49" />
+                        </Size>
+                        <mouseEnabled>true</mouseEnabled>
+                        <mouseChildren>true</mouseChildren>
+
+                        <Label name="itemName">
+                            <Anchors>
+                                <Anchor>
+                                    <AbsDimension x="51" y="10" />
+                                </Anchor>
+                            </Anchors>
+                            <Size>
+                                <AbsDimension x="280" y="20" />
+                            </Size>
+                            <css>[local.css]normal.css</css>
+                        </Label>
+
+                        <Texture name="itemIcon">
+                            <Anchors>
+                                <Anchor>
+                                    <AbsDimension x="6" y="3" />
+                                </Anchor>
+                            </Anchors>
+                            <Size>
+                                <AbsDimension x="44" y="44" />
+                            </Size>
+                            <autoGrid>true</autoGrid>
+                        </Texture>                 
+                    </Common>
+                 </Button>
+	        </Grid>
+			
+			<!-- foreground grid -->
+	         <Texture>
+				<Anchors>
+					<Anchor>
+						<AbsDimension x="18" y="60" />
+					</Anchor>
+				</Anchors>
+	            <Size>
+	                <AbsDimension x="362" y="618" />
+	            </Size>
+				<uri>[local.assets]storage_tx_gridLine</uri>
+	            <autoGrid>true</autoGrid>
+			</Texture>
+
+	        <iconButton name="btnClose">
+				<Anchors>
+					<Anchor relativeTo="txBackground" point="TOPRIGHT" relativePoint="TOPRIGHT" />
+				</Anchors>
+				<Size>
+					<AbsDimension x="57" y="36" />
+				</Size>
+				<uri>[local.assets]btn_cornerCross</uri>
+        	</iconButton>
+	        
+        </Container>
+	</Container>
+</Definition>
+

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<menu>
+	<!--MENUADMIN V 1.0 ADMIN SYDORIA GAMES 2014-->
+
+	<item type="static" label="Modération"/>
+	
+	<item type="menu" label="01. Infos">
+		<item type="static" label="Info %p"/>	
+		<item type="sendCommand" label="Informations compte" command="info char %p"/>
+		<item type="sendCommand" label="Nombre connectés" command="info "/>
+		<item type="sendCommand" label="Sauvegarde serveur" command="save world"/>
+	</item>
+	
+	<item type="menu" label="02. Annonces">
+		<item type="static" label="Annonce simple"/>	
+		<item type="prepareCommand" label="All" command="a  "/>
+	</item>
+	
+	<item type="menu" label="03. Avertissements">
+			<item type="sendChat" label="Vulgarité / Insultes" command="/w %p Les insultes et la vulgarité sont sévèrement sanctionnées. Cela sera l'unique avertissement. Veuillez consulter les &lt;a href='http://www.dofus.com/fr/mmorpg/sanctions'&gt; &lt;font color='#0000FF'&gt;Règles de SYDORIA&lt;/font&gt; &lt;/a&gt; (Cliquez dessus)."/>	
+
+			<item type="sendChat" label="Provocation" command="/w %p Répondre à des provocations pourrait vous amener à être sanctionné. Vous devez ignorer le personnage qui insulte ou provoque."/> 
+		
+		    <item type="sendChat" label="Arnaque" command="/w %p Les arnaques sont sévèrement sanctionnées. Cela sera l'unique avertissement. Veuillez consulter les &lt;a href='http://www.dofus.com/fr/mmorpg/sanctions'&gt; &lt;font color='#0000FF'&gt;Règles de SYDORIA&lt;/font&gt; &lt;/a&gt; (Cliquez dessus)."/>
+		<item type="menu" label="Commerce">
+			<item type="sendChat" label="Commerce inter" command="/w %p Le commerce inter-serveurs est un acte répréhensible. Ceci sera l'unique avertissement avant sanction. Veuillez consulter Les règles de Sydoria (Cliquez dessus)" />
+			<item type="sendChat" label="Commerce Audiotel" command="/w %p Le Commerce de Codes Audiotels est un acte strictement interdit. Cela sera l'unique avertissement avant sanction. Veuillez consulter Les règles de Sydoria (Cliquez dessus)" />
+		</item>
+            <item type="sendChat" label="Site tiers" command="/w %p La diffusion de liens vers des sites non officiels de Sydoria est interdite en jeu. Ceci sera l'unique avertissement avant sanction."/>
+	</item>
+
+	<item type="menu" label="04. Sanctions">
+		<item type="static" label="Sanctions Générales"/>
+		
+			<item type="sendCommand" label="ExcèsVulgarité M-60m" command="mute %p 60"/>
+
+		
+		<item type="batch" label="Insulte K-24h"> 
+			<item type="sendCommand" label="Insulte K-24h" command="ban %p 1440 Insultes "/>
+			<item type="sendCommand" label="Msg" command="a %p a été exclu 24h pour avoir insulté un membre de la communauté."/>
+		</item>
+		
+
+		<item type="sendCommand" label="Harcèlement-Menace MUTE-24h" command="mute %p 1440 "/>
+
+		
+
+		<item type="sendCommand" label="Racisme/Xeno JAIL-48h" command="jail %p 2880 Racisme"/>
+
+		
+
+		<item type="sendCommand" label="Arnaque JAIL-24h" command="jail %p 1440 Arnaque"/>
+
+		
+		<item type="static" label="Sanctions diverses"/>
+		<item type="batch" label="kick">
+		<item type="sendCommand" label="kick" command="kick %p"/>
+		<item type="sendCommand" label="Msg" command="a %p a été expulsé du jeu."/>
+		</item>
+		
+		<item type="menu" label="Mute">
+
+			<item type="batch" label="15 minutes"> 
+				<item type="sendCommand" label="M-15m" command="mute %p 15 "/>			
+			</item>
+			<item type="batch" label="1 heure"> 
+				<item type="sendCommand" label="M-60m" command="mute %p 60"/>
+			</item>
+			<item type="batch" label="24 heures"> 
+				<item type="sendCommand" label="M-24h" command="mute %p 1440"/>
+			</item>
+		</item>
+		
+		<item type="menu" label="Ban">
+			<item type="batch" label="1 heure"> 
+				<item type="sendCommand" label="K-60m" command="ban %p 60"/>
+				<item type="sendCommand" label="Msg" command="a %p a été expulsé du jeu.."/>
+			</item>
+			<item type="batch" label="24 heure"> 
+				<item type="sendCommand" label="BAN-24h" command="ban %p 1440"/>
+				<item type="sendCommand" label="Msg" command="a %p a été expulsé du jeu.."/>
+			</item>
+			<item type="batch" label="48 heures"> 
+				<item type="sendCommand" label="BAN-48h" command="ban %p 2880"/>
+				<item type="sendCommand" label="Msg" command="a %p a été expulsé du jeu.."/>
+			</item>
+		</item>
+		<item type="menu" label="Jail">
+			<item type="batch" label="1 heure"> 
+				<item type="sendCommand" label="J-60m" command="jail %p 60"/>
+			</item>
+			<item type="batch" label="24 heure"> 
+				<item type="sendCommand" label="J-24h" command="jail %p 1440"/>
+			</item>
+			<item type="batch" label="48 heures"> 
+				<item type="sendCommand" label="J-48h" command="jail %p 2880"/>
+			</item>
+		</item>
+		<item type="menu" label="Map">
+				<item type="sendCommand" label="Mute / Unmute map" command="mutemap" />
+
+		</item>
+	</item>
+	<item type="menu" label="05. Morph">
+	<item type="sendCommand" label="Lion" command="look {1003}"/>
+	<item type="sendCommand" label="Ankama" command="look {1150|||160}"/>
+	<item type="sendCommand" label="Demorph" command="look -demorph"/>
+	<item type="sendCommand" label="Invisible/Visible" command="invisible"/>
+	</item>
+	<item type="menu" label="06. Téléportation">
+	<item type="sendCommand" label="Rejoindre" command="goname %p"/>
+	<item type="sendCommand" label="Faire venir" command="namego %p"/>
+	<item type="sendCommand" label="Kanojedo" command="tp 88212247 %p 343"/>
+	<item type="sendCommand" label="Astrub" command="tp 84674563 %p 300"/>
+	<item type="sendCommand" label="Frigost" command="tp 54172969 %p 300" />
+	<item type="sendCommand" label="Incarnam" command="tp 80216068 %p 343" />
+	</item>
+	<item type="menu" label="07. Ornements/Titres">
+	<item type="sendCommand" label="All titres" command="title add %p -all" />
+	<item type="sendCommand" label="All ornements" command="ornement add %p -all" />
+	</item>
+	
+	<item type="loadXML" label="ReloadXML"/>
+</menu>
